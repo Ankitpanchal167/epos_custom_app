@@ -1,0 +1,11 @@
+Compile:
+1)source  ~/Project/littelworld/sdk/ei/source/linux-devkit/environment-setup
+2)$CC test_fp_a365_biosec.c  -o test_fp_a365_biosec
+or
+3)$CC test_fp_a365_biosec.c fingerprint.c fingerprintA.c  fingerprintC.c SPI.c -o test_fp_a365_biosec
+
+Run:
+./test_fp_a365_biosec -s 100000 -D /dev/spidev1.0
+
+Customer Provided  App  for refrence
+demo.c

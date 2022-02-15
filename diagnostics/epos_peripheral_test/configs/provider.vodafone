@@ -1,0 +1,22 @@
+/dev/ttyUSB0
+115200
+connect '/usr/sbin/chat -v -f /etc/ppp/chat-vodafone'
+disconnect '/usr/sbin/chat -v -f /etc/ppp/hangup-vodafone'
+# mru 296
+# mtu 296
+novj
+novjccomp
+user "vodafone"
+nocrtscts
+modem -detach
+noauth
+noipdefault
+usepeerdns
+#show-password
+defaultroute
+#replacedefaultroute
+#ipcp-accept-local
+#ipcp-accept-remote
+local
+#nodeflate
+nodetach

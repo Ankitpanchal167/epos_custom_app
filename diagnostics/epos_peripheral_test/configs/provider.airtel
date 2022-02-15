@@ -1,0 +1,22 @@
+/dev/ttyUSB0
+115200
+connect '/usr/sbin/chat -v -f /etc/ppp/chat-airtel'
+disconnect '/usr/sbin/chat -v -f /etc/ppp/hangup-airtel'
+# mru 296
+# mtu 296
+novj
+novjccomp
+user "airtel"
+nocrtscts
+modem -detach
+noauth
+noipdefault
+usepeerdns
+#show-password
+defaultroute
+#replacedefaultroute
+#ipcp-accept-local
+#ipcp-accept-remote
+local
+#nodeflate
+nodetach

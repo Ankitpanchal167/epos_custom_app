@@ -1,0 +1,9 @@
+DIRS := fingerprint_app
+DIRS += oled_app
+DIRS += poweroff_app
+DIRS += scripts
+DIRS += diagnostics
+DIRS += version
+DIRS += nfc
+DIRS += fbvs-master
+#DIRS += fbv-1.0b

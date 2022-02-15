@@ -1,0 +1,242 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACTIVE	demo.c	54;"	d	file:
+ACTIVE	test_fp_a365_biosec.c	26;"	d	file:
+ACTIVE	test_fp_a365_biosec_int.c	27;"	d	file:
+ADJ	fingerprintA.c	74;"	d	file:
+ARRAYH	fingerprint.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+ARRAYH	test_fp_a365_biosec.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+ARRAYH	test_fp_a365_biosec_int.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+ARRAYW	fingerprint.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+ARRAYW	test_fp_a365_biosec.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+ARRAYW	test_fp_a365_biosec_int.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+ARRAY_SIZE	test_fp_a365_biosec.c	28;"	d	file:
+ARRAY_SIZE	test_fp_a365_biosec_int.c	29;"	d	file:
+AUTO	test_fp_a365_biosec.c	25;"	d	file:
+AUTO	test_fp_a365_biosec_int.c	26;"	d	file:
+BASE_DIR	Makefile	/^BASE_DIR	:= $(realpath $(realpath .)\/..)$/;"	m
+CALIB_FF	demo.c	55;"	d	file:
+CENTR	A365.h	7;"	d
+CHECK	demo.c	56;"	d	file:
+D0	A365.h	14;"	d
+D1	A365.h	15;"	d
+DBG	demo.c	33;"	d	file:
+DEFAULTMODE	demo.c	64;"	d	file:
+DEMO_COLOR	demo.c	48;"	d	file:
+DETECT	demo.c	59;"	d	file:
+DETECT	test_fp_a365_biosec.c	27;"	d	file:
+DETECT	test_fp_a365_biosec_int.c	28;"	d	file:
+EMPTY_IMAGE_SPAN	fingerprintC.h	11;"	d
+EMPTY_IMAGE_VAR	fingerprintC.h	12;"	d
+ENCRYPT	demo.c	60;"	d	file:
+FPCONFIG	fingerprint.h	/^} FPCONFIG;$/;"	t	typeref:struct:fpconfig
+FPSTAT	fingerprint.h	/^} FPSTAT;$/;"	t	typeref:struct:fpstat
+FP_auto	fingerprint.c	/^int FP_auto(unsigned char *buff, int target, int autogain)$/;"	f
+FP_autoWhite	fingerprintW.c	/^int FP_autoWhite (unsigned char *fpbuff, int whitelvl)$/;"	f
+FP_chksize	fingerprint.c	/^void FP_chksize(unsigned int *w, unsigned int *h)$/;"	f
+FP_detst	fingerprint.c	/^void FP_detst()$/;"	f
+FP_fastmode	fingerprint.c	/^void FP_fastmode(int fast)$/;"	f
+FP_getstat	fingerprint.c	/^void FP_getstat(FPSTAT *ptr)$/;"	f
+FP_hardreset	fingerprint.c	/^void FP_hardreset ()$/;"	f
+FP_histogram	fingerprint.c	/^void FP_histogram (void)$/;"	f
+FP_init	fingerprint.c	/^void FP_init (FPCONFIG *cfg)$/;"	f
+FP_initdetect	fingerprint.c	/^void FP_initdetect()$/;"	f
+FP_inithist	fingerprintW.c	/^static void FP_inithist (void)$/;"	f	file:
+FP_initotp	fingerprint.c	/^void FP_initotp ()$/;"	f
+FP_initscan	fingerprint.c	/^void FP_initscan()$/;"	f
+FP_intr	fingerprint.c	/^int FP_intr()$/;"	f
+FP_readconfig	fingerprint.c	/^void FP_readconfig (unsigned char *s)$/;"	f
+FP_readimage	fingerprint.c	/^void FP_readimage (unsigned char *buff)$/;"	f
+FP_readimageA	fingerprintA.c	/^void FP_readimageA (unsigned char *buff, int nn, int target)$/;"	f
+FP_readimageC	fingerprintC.c	/^void FP_readimageC (unsigned char *refimg, unsigned int rmean, unsigned char *buff, int target, int nn)$/;"	f
+FP_readimageN	fingerprintW.c	/^static void FP_readimageN (unsigned char *buff, int i)$/;"	f	file:
+FP_readotp	fingerprint.c	/^void FP_readotp (unsigned char *s)$/;"	f
+FP_setoffs	fingerprint.c	/^void FP_setoffs(int val)$/;"	f
+FP_setoffs	fingerprintW.c	/^static void FP_setoffs(int val)$/;"	f	file:
+FP_softreset	fingerprint.c	/^void FP_softreset ()$/;"	f
+FP_status	fingerprint.c	/^int FP_status()$/;"	f
+GMAX	A365.h	13;"	d
+HP	fingerprintW.c	114;"	d	file:
+IRAM1	demo.c	/^unsigned char *IRAM1 = (unsigned char *)0x20000000;$/;"	v
+LASTMODE	demo.c	63;"	d	file:
+LP	fingerprintW.c	115;"	d	file:
+M5	demo.c	61;"	d	file:
+M5C	demo.c	62;"	d	file:
+MAXCOLUMN	test_fp_a365_biosec.c	57;"	d	file:
+MAXCOLUMN	test_fp_a365_biosec_int.c	58;"	d	file:
+MAXROW	test_fp_a365_biosec.c	56;"	d	file:
+MAXROW	test_fp_a365_biosec_int.c	57;"	d	file:
+MINSPAN	fingerprintW.c	113;"	d	file:
+Memory	demo.c	/^unsigned char Memory[MSC_HeaderSize];$/;"	v
+PASSIV	demo.c	53;"	d	file:
+PKT_SIZE	fingerprint.c	27;"	d	file:
+PROJ_INCPATH	Makefile	/^PROJ_INCPATH	:=$/;"	m
+PROJ_LIBPATH	Makefile	/^PROJ_LIBPATH	:=$/;"	m
+PROJ_LIBS	Makefile	/^PROJ_LIBS	:=$/;"	m
+PROJ_NAME	Makefile	/^PROJ_NAME	:= fingerprint_app$/;"	m
+READ_DATA_CMD	test_fp_a365_biosec.c	63;"	d	file:
+READ_DATA_CMD	test_fp_a365_biosec_int.c	64;"	d	file:
+READ_REGS	test_fp_a365_biosec.c	60;"	d	file:
+READ_REGS	test_fp_a365_biosec_int.c	61;"	d	file:
+RRDY_BIT	test_fp_a365_biosec.c	54;"	d	file:
+RRDY_BIT	test_fp_a365_biosec_int.c	55;"	d	file:
+Reg0	fingerprint.h	/^    unsigned char   Reg0;  \/\/ reg0: DETDIV(4),OSCDIV(4)$/;"	m	struct:fpconfig
+Reg1	fingerprint.h	/^    unsigned char   Reg1;  \/\/ reg1: RSTT(4), SAMPT(4)$/;"	m	struct:fpconfig
+Reg2	fingerprint.h	/^    unsigned char   Reg2;  \/\/ reg2: ADC_ISEL(2), PGA_ISEL(2), BG_ISEL(2), ADCREF, LDOSUS$/;"	m	struct:fpconfig
+Reg3	fingerprint.h	/^    unsigned char   Reg3;  \/\/ reg3: PSF_ISEL(2), SF_ISEL(2), VDDR_ISEL(2), OSC(ISEL(2)$/;"	m	struct:fpconfig
+Reg4	fingerprint.h	/^    unsigned char   Reg4;  \/\/ reg4: SELI(2),SELR(3),VDETSEL(3)$/;"	m	struct:fpconfig
+Reg5	fingerprint.h	/^    unsigned char   Reg5;  \/\/ reg5: ADCIOPT(1),OFFS(7)$/;"	m	struct:fpconfig
+Reg6	fingerprint.h	/^    unsigned char   Reg6;  \/\/ reg6: --, ACONF(3), PGAGAIN(3)$/;"	m	struct:fpconfig
+Reg7	fingerprint.h	/^    unsigned char   Reg7;  \/\/ reg7: SCANDELAY(4),CDSCPN(4)$/;"	m	struct:fpconfig
+Reg8	fingerprint.h	/^    unsigned char   Reg8;  \/\/ reg8: DETCLK(2),DETTH(6)$/;"	m	struct:fpconfig
+Reg9	fingerprint.h	/^    unsigned char   Reg9;  \/\/ reg9: CDSADJ(2),TRIM10K(3),TRI4M(3)$/;"	m	struct:fpconfig
+RegA	fingerprint.h	/^    unsigned char   RegA;  \/\/ regA: INVIO,LTEST,T1SEL(2),INVIO2,T2OE,T2SEL(2)$/;"	m	struct:fpconfig
+RegB	fingerprint.h	/^    unsigned char   RegB;  \/\/ regB: SUBSCAN,INVERT,ENDET,ENCRYP,ENPWR,ENADC,EN10K,EN4M$/;"	m	struct:fpconfig
+RegC	fingerprint.h	/^    unsigned char   RegC;  \/\/ regC: ---,RSTPAT(5)$/;"	m	struct:fpconfig
+RegD	fingerprint.h	/^    unsigned char   RegD;  \/\/ regD: OTPADDR$/;"	m	struct:fpconfig
+RegE	fingerprint.h	/^    unsigned char   RegE;  \/\/ regE: OTPWD$/;"	m	struct:fpconfig
+RegF	fingerprint.h	/^    unsigned char   RegF;  \/\/ regF: OTPCMD$/;"	m	struct:fpconfig
+SHOWOTP	demo.c	58;"	d	file:
+SHOWREG	demo.c	57;"	d	file:
+SLOPE	A365.h	12;"	d
+SPANADJ	fingerprintW.c	112;"	d	file:
+SPI_RST	SPI.c	/^void SPI_RST(unsigned char val)$/;"	f
+SPI_sr	SPI.c	/^unsigned char SPI_sr(unsigned char c)$/;"	f
+SRCS_C	Makefile	/^SRCS_C		:= test_fp_a365_biosec_int.c fingerprint.c fingerprintA.c fingerprintC.c SPI.c$/;"	m
+SRCS_S	Makefile	/^SRCS_S		:=$/;"	m
+START_SCAN_CMD	test_fp_a365_biosec.c	62;"	d	file:
+START_SCAN_CMD	test_fp_a365_biosec_int.c	63;"	d	file:
+TAEGET0	A365.h	9;"	d
+TAIL10TH	fingerprintW.c	108;"	d	file:
+TAILSZ	fingerprint.c	407;"	d	file:
+TOTALPIX	fingerprint.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+TOTALPIX	test_fp_a365_biosec.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+TOTALPIX	test_fp_a365_biosec_int.c	/^unsigned int     ARRAYH, ARRAYW, TOTALPIX;              \/\/ actual size$/;"	v
+USCNT	fingerprint.c	29;"	d	file:
+V0	A365.h	10;"	d
+V1	A365.h	11;"	d
+WHITE	A365.h	8;"	d
+WRANGE	fingerprint.c	408;"	d	file:
+WRITE_CONTROL_REG	test_fp_a365_biosec.c	61;"	d	file:
+WRITE_CONTROL_REG	test_fp_a365_biosec_int.c	62;"	d	file:
+XEMPTY_BIT	test_fp_a365_biosec.c	53;"	d	file:
+XEMPTY_BIT	test_fp_a365_biosec_int.c	54;"	d	file:
+_FINGERPRINT_CH	fingerprintC.h	9;"	d
+_FINGERPRINT_H	fingerprint.h	9;"	d
+__FPCFG_H	A365.h	24;"	d
+__FPCFG_H	demo.c	24;"	d	file:
+__SPI_H	SPI.h	2;"	d
+abit	fingerprintA.c	/^static void abit(int r)$/;"	f	file:
+abit	fingerprintW.c	/^static void abit(int r)$/;"	f	file:
+arrayh	fingerprint.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+arrayh	test_fp_a365_biosec.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+arrayh	test_fp_a365_biosec_int.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+arrayw	fingerprint.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+arrayw	test_fp_a365_biosec.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+arrayw	test_fp_a365_biosec_int.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+ascii	demo.c	/^unsigned char ascii[] = "0123456789ABCDEF";$/;"	v
+autogain	demo.c	/^int           autogain=0;$/;"	v
+bits	test_fp_a365_biosec.c	/^static uint8_t bits = 8;$/;"	v	file:
+bits	test_fp_a365_biosec_int.c	/^static uint8_t bits = 8;$/;"	v	file:
+config	fingerprint.c	/^FPCONFIG         *config;$/;"	v
+cover	fingerprint.h	/^    int cover;$/;"	m	struct:fpstat
+delay	fingerprint.c	/^static void delay (int n)$/;"	f	file:
+delay	fingerprintA.c	/^static void delay (int n)$/;"	f	file:
+delay	fingerprintC.c	/^static void delay (int n)$/;"	f	file:
+delay	test_fp_a365_biosec.c	/^static uint16_t delay;$/;"	v	file:
+delay	test_fp_a365_biosec_int.c	/^static uint16_t delay;$/;"	v	file:
+device	test_fp_a365_biosec.c	/^static const char *device = "\/dev\/spidev1.1";$/;"	v	file:
+device	test_fp_a365_biosec_int.c	/^static const char *device = "\/dev\/spidev1.1";$/;"	v	file:
+dis_4m_clk	test_fp_a365_biosec_int.c	/^void dis_4m_clk()$/;"	f
+fd	test_fp_a365_biosec.c	/^	int fd;$/;"	v
+fd	test_fp_a365_biosec_int.c	/^int fd;$/;"	v
+fd_yuv	test_fp_a365_biosec.c	/^	int fd_yuv;$/;"	v
+fd_yuv	test_fp_a365_biosec_int.c	/^int fd_yuv;$/;"	v
+fp_cnt	fingerprint.c	/^unsigned int     fp_lvl, fp_cnt;$/;"	v
+fp_cover	fingerprint.h	48;"	d
+fp_detect_capture	test_fp_a365_biosec_int.c	/^void fp_detect_capture()$/;"	f
+fp_hi	fingerprint.h	45;"	d
+fp_lo	fingerprint.h	46;"	d
+fp_lvl	fingerprint.c	/^unsigned int     fp_lvl, fp_cnt;$/;"	v
+fp_mean	fingerprint.h	43;"	d
+fp_med	fingerprint.h	47;"	d
+fp_mode	test_fp_a365_biosec.c	/^static uint8_t fp_mode;$/;"	v	file:
+fp_mode	test_fp_a365_biosec_int.c	/^static uint8_t fp_mode;$/;"	v	file:
+fp_variance	fingerprint.h	44;"	d
+fpconfig	fingerprint.h	/^typedef struct fpconfig {$/;"	s
+fpconfig0	A365.h	/^FPCONFIG fpconfig0 = {$/;"	v
+fpconfig1	A365.h	/^FPCONFIG fpconfig1 = {$/;"	v
+fpimage	demo.c	/^unsigned char *fpimage;     \/\/ image buffer$/;"	v
+fpstat	fingerprint.c	/^FPSTAT           fpstat;$/;"	v
+fpstat	fingerprint.h	/^typedef struct fpstat {$/;"	s
+get_gain	fingerprint.h	88;"	d
+get_offs	fingerprint.h	87;"	d
+gval	fingerprint.c	/^static int gval[] = {4, 5, 6, 7, 8, 10, 12, 14};$/;"	v	file:
+hard_reset	test_fp_a365_biosec_int.c	/^void hard_reset()$/;"	f
+hi	fingerprint.h	/^    int hi;$/;"	m	struct:fpstat
+histogram	fingerprint.c	/^unsigned int     histogram[128];                        \/\/ statistic$/;"	v
+histogram	fingerprint.c	/^unsigned int    histogram[128];$/;"	v
+image	test_fp_a365_biosec.c	/^unsigned char image[360 * 256];$/;"	v
+image	test_fp_a365_biosec_int.c	/^unsigned char image[360 * 256];$/;"	v
+lo	fingerprint.h	/^    int lo;$/;"	m	struct:fpstat
+main	demo.c	/^int main (void) {$/;"	f
+main	test_fp_a365_biosec.c	/^int main(int argc, char *argv[])$/;"	f
+main	test_fp_a365_biosec_int.c	/^int main(int argc, char *argv[])$/;"	f
+mean	fingerprint.h	/^    int mean;$/;"	m	struct:fpstat
+med	fingerprint.h	/^    int med;$/;"	m	struct:fpstat
+mode	test_fp_a365_biosec.c	/^static uint8_t mode;$/;"	v	file:
+mode	test_fp_a365_biosec_int.c	/^static uint8_t mode;$/;"	v	file:
+modecode	demo.c	/^unsigned char modecode[] = "-PACNROEXFG-";$/;"	v
+pabort	test_fp_a365_biosec.c	/^static void pabort(const char *s)$/;"	f	file:
+pabort	test_fp_a365_biosec_int.c	/^static void pabort(const char *s)$/;"	f	file:
+parse_opts	test_fp_a365_biosec.c	/^static void parse_opts(int argc, char *argv[])$/;"	f	file:
+parse_opts	test_fp_a365_biosec_int.c	/^static void parse_opts(int argc, char *argv[])$/;"	f	file:
+pause	demo.c	/^void pause() $/;"	f
+printRegs	test_fp_a365_biosec.c	/^void printRegs()   $/;"	f
+printRegs	test_fp_a365_biosec_int.c	/^void printRegs()$/;"	f
+printRegs365	test_fp_a365_biosec.c	/^void printRegs365()   $/;"	f
+printRegs365	test_fp_a365_biosec_int.c	/^void printRegs365()$/;"	f
+print_usage	test_fp_a365_biosec.c	/^static void print_usage(const char *prog)$/;"	f	file:
+print_usage	test_fp_a365_biosec_int.c	/^static void print_usage(const char *prog)$/;"	f	file:
+readImage	test_fp_a365_biosec.c	/^void readImage( unsigned char *image_ptr )$/;"	f
+readImage	test_fp_a365_biosec_int.c	/^void readImage( unsigned char *image_ptr )$/;"	f
+readImage365	test_fp_a365_biosec.c	/^void readImage365( unsigned char *image_ptr )$/;"	f
+readImage365	test_fp_a365_biosec_int.c	/^void readImage365( unsigned char *image_ptr )$/;"	f
+reada	fingerprintA.c	/^static void reada (unsigned char *buff, int offs, int mean, int sign)$/;"	f	file:
+readadd	fingerprintW.c	/^static void readadd (unsigned char *buff, int offs, int mean, int sign)$/;"	f	file:
+readreg	demo.c	/^unsigned char readreg[32];$/;"	v
+readreg	test_fp_a365_biosec.c	/^unsigned char readreg[32];$/;"	v
+readreg	test_fp_a365_biosec_int.c	/^unsigned char readreg[32];$/;"	v
+rx_buf	test_fp_a365_biosec.c	/^unsigned char rx_buf[20];$/;"	v
+rx_buf	test_fp_a365_biosec_int.c	/^unsigned char rx_buf[20];$/;"	v
+scanN	test_fp_a365_biosec.c	/^int scanN = 1;$/;"	v
+scanN	test_fp_a365_biosec_int.c	/^int scanN = 1;$/;"	v
+set_gain	fingerprint.h	86;"	d
+set_offs	fingerprint.h	85;"	d
+setbit	fingerprint.h	90;"	d
+slope	fingerprintW.c	/^unsigned int slope[] = { 1766,2208,2650,3091,3533,4416,5299,6182};$/;"	v
+speed	test_fp_a365_biosec.c	/^static uint32_t speed = 500000;$/;"	v	file:
+speed	test_fp_a365_biosec_int.c	/^static uint32_t speed = 500000;$/;"	v	file:
+spi_dup	test_fp_a365_biosec.c	/^void spi_dup(char *tx_buf,char *rx_buf,int len)$/;"	f
+spi_dup	test_fp_a365_biosec_int.c	/^void spi_dup(char *tx_buf,char *rx_buf,int len)$/;"	f
+spi_rx	test_fp_a365_biosec.c	/^void spi_rx(char *rx_buf , int len)$/;"	f
+spi_rx	test_fp_a365_biosec_int.c	/^void spi_rx(char *rx_buf , int len)$/;"	f
+spi_tx	test_fp_a365_biosec.c	/^void spi_tx(char *tx_buf,int len)$/;"	f
+spi_tx	test_fp_a365_biosec_int.c	/^void spi_tx(char *tx_buf,int len)$/;"	f
+sqrti	fingerprint.c	/^static int sqrti (int x)$/;"	f	file:
+stdspan	fingerprintW.c	/^unsigned int stdspan[] = {90, 72, 60, 51, 45, 36, 30, 25};$/;"	v
+totalpix	fingerprint.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+totalpix	fingerprint.c	/^unsigned int totalpix;$/;"	v
+totalpix	test_fp_a365_biosec.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+totalpix	test_fp_a365_biosec_int.c	/^unsigned int     arrayh, arrayw, totalpix;              \/\/ working copy$/;"	v
+transfer	test_fp_a365_biosec.c	/^static void transfer(int fd)$/;"	f	file:
+tx_buf	test_fp_a365_biosec.c	/^unsigned char tx_buf[20];$/;"	v
+tx_buf	test_fp_a365_biosec_int.c	/^unsigned char tx_buf[20];$/;"	v
+useroffs	demo.c	/^int           useroffs = 180;$/;"	v
+variance	fingerprint.h	/^    int variance;$/;"	m	struct:fpstat
+whitelvl	test_fp_a365_biosec.c	/^int whitelvl = 10;$/;"	v
+whitelvl	test_fp_a365_biosec_int.c	/^int whitelvl = 10;$/;"	v

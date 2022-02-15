@@ -1,0 +1,4 @@
+'' ATZ OK
+AT+CGDCONT=1,"IP","live.vodafone.com"
+OK "ATD*99***1#"
+CONNECT ''

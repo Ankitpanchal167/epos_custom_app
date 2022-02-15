@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash /opt/epos_peripheral_test/scripts/epos_diag.sh

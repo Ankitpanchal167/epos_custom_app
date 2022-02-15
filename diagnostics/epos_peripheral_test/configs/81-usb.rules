@@ -1,0 +1,2 @@
+ENV{DEVTYPE}=="disk", ENV{ID_USB_DRIVER}=="usb-storage", ENV{ID_PATH}=="?*", SYMLINK+="disk/by-path/usb"
+ENV{DEVTYPE}=="partition", ENV{ID_USB_DRIVER}=="usb-storage", ENV{ID_PATH}=="?*", SYMLINK+="disk/by-path/usb-part%n"

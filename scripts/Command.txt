@@ -1,0 +1,155 @@
+# Camera Color
+LED=160
+echo $LED > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio$LED/direction
+echo 1 > /sys/class/gpio/gpio$LED/value #on
+
+v4l2-ctl --device /dev/video0 --stream-mmap --stream-to=frame.yuv --stream-count=50
+ffmpeg -f rawvideo -vcodec rawvideo -s 640x480 -r 25 -pix_fmt yuyv422 -i frame.yuv  %d.jpg
+
+# Camera IRIS
+v4l2-ctl --device /dev/video1 --stream-mmap --stream-to=frame.yuv --stream-count=50
+ffmpeg -f rawvideo -vcodec rawvideo -s 640x480 -r 25 -pix_fmt yuyv422 -i frame.yuv  %d.jpg
+
+# LCD
+echo 1 > /sys/class/graphics/fb0/blank # backlight off
+echo 0 > /sys/class/graphics/fb0/blank # backlight on
+fb-test -f 0
+
+# Audio
+amixer -c 0 cset iface=MIXER,name="HP Driver Playback Switch" 1
+amixer -c 0 cset iface=MIXER,name="DAC Left Input" 1
+amixer -c 0 cset iface=MIXER,name="DAC Right Input" 1
+amixer -c 0 cset iface=MIXER,name="HP Analog Playback Volume" 60
+amixer -c 0 cset iface=MIXER,name="HP Driver Playback Volume" 3
+amixer -c 0 cset iface=MIXER,name="HP Left Switch" 1
+amixer -c 0 cset iface=MIXER,name="HP Right Switch" 1
+amixer -c 0 cset iface=MIXER,name="Output Left From Left DAC" 1
+amixer -c 0 cset iface=MIXER,name="Output Right From Right DAC"  1
+amixer -c 0 cset iface=MIXER,name="DAC Playback Volume" 127
+amixer -c 0 cset iface=MIXER,name="Speaker Switch"  1
+amixer -c 0 cset iface=MIXER,name="Speaker Driver Playback Switch" 1
+amixer -c 0 cset iface=MIXER,name="DAC Playback Volume"  120
+amixer -c 0 cset iface=MIXER,name="Speaker Analog Playback Volume"  74
+amixer -c 0 cset iface=MIXER,name="Speaker Driver Playback Volume" 3
+
+
+# Battery gauge
+cat /sys/class/power_supply/bq27510g3_battery/voltage_now
+cat /sys/class/power_supply/bq27510g3_battery/temp
+cat /sys/class/power_supply/bq27510g3_battery/capacity
+
+
+# LED
+LED=16 #red
+echo $LED > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio$LED/direction
+echo 1 > /sys/class/gpio/gpio$LED/value #on
+echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+LED=21 #yellow
+echo $LED > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio$LED/direction
+echo 1 > /sys/class/gpio/gpio$LED/value #on
+echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+LED=28 #green
+echo $LED > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio$LED/direction
+echo 1 > /sys/class/gpio/gpio$LED/value #on
+echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+LED=29 #orange
+echo $LED > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio$LED/direction
+echo 1 > /sys/class/gpio/gpio$LED/value #on
+echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+LED=62 #FP sensor
+echo $LED > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio$LED/direction
+echo 1 > /sys/class/gpio/gpio$LED/value #on
+echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+# IR LED
+echo 0 > /sys/class/backlight/backlight/bl_power #on
+echo 4 > /sys/class/backlight/backlight/bl_power #off
+echo 8 > /sys/class/backlight/backlight/brightness #max brightness
+echo 0 > /sys/class/backlight/backlight/brightness #min brightness
+
+
+# Barcode
+stty -icanon -F /dev/ttyS3
+cat /dev/ttyS3 &
+
+LED=161 #nTRIG
+echo $LED > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio$LED/direction
+echo 0 > /sys/class/gpio/gpio$LED/value #on
+sleep 3
+echo 1 > /sys/class/gpio/gpio$LED/value #off
+
+
+# Keypad
+evtest #Run evtest and select keypad event node
+
+
+# BT
+echo 104 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio104/direction
+echo 0 > /sys/class/gpio/gpio104/value #reset bt reg
+sleep 1
+echo 1 > /sys/class/gpio/gpio104/value #bt reg on
+
+hciattach -s 115200 /dev/ttyS1 texas
+hcitool scan
+
+
+# WIFI
+ifconfig wlan0 up
+iw wlan0 scan
+
+
+# SW Poweroff
+poweroff
+
+
+# Keypad poweroff
+/usr/bin/epos_poweroff
+
+
+# Sleep
+echo mem > /sys/power/state
+
+
+# Nand partitions
+mtdinfo -a
+
+
+# DDR
+cat /proc/meminfo
+
+
+# Fingerprint
+/usr/bin/fingerprint_app -s 1000000 -D /dev/spidev2.0
+ffmpeg -f rawvideo -vcodec rawvideo -s 256x360 -r 1 -pix_fmt gray -i test.yuv  %d.jpg
+
+
+# OLED test
+/usr/bin/oled_app -s 100000 -D /dev/spidev4.0
+
+# RTC
+major=`cat /proc/devices | grep pub2sec | cut -d" " -f1`
+mknod /dev/pub2sec c $major 0
+/usr/bin/rtcTime -l
+/usr/bin/rtcTime "2020-08-15 12:00:00"
+/usr/bin/rtcTime
+
+
+# Tamper
+major=`cat /proc/devices | grep pub2sec | cut -d" " -f1`
+mknod /dev/pub2sec c $major 0
+/usr/bin/bbsram -l
+/usr/bin/bbsram write
+/usr/bin/bbsram read
+

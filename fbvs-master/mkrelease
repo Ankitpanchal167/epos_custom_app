@@ -1,0 +1,17 @@
+#!/bin/bash
+
+make distclean
+
+NAME="fbvs-`cat VERSION`"
+OLDDIR="`pwd`"
+
+rm -fr fbvs-*.tar.gz
+cd ..
+mv $OLDDIR $NAME
+
+tar -zcvf $NAME.tar.gz $NAME/
+
+mv $NAME $OLDDIR
+mv $NAME.tar.gz $OLDDIR
+
+cd $OLDDIR

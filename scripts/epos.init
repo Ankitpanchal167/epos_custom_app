@@ -1,0 +1,96 @@
+#!/bin/sh
+
+NAME=epos
+DESC="epos init"
+
+init() {
+
+	# Read time from RTC and set on device
+	major=`cat /proc/devices | grep pub2sec | cut -d ' ' -f1`
+	mknod /dev/pub2sec c $major 0
+	timestamp=$(cd /usr/bin/ && /usr/bin/rtcTime | grep "Date:YEAR=" -A 2 | tail -n 1)
+	date -d "$timestamp"
+
+	#Start Power Off Application
+	/usr/bin/epos_poweroff &
+
+	# Turn off LCD display
+	#echo 1 > /sys/class/graphics/fb0/blank
+	/usr/bin/fbvs-master -d /dev/fb0 --stretch < /opt/hello.png
+
+	# Set default Audio params
+	amixer -c 0 cset iface=MIXER,name="HP Driver Playback Switch" 1 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="DAC Left Input" 1  >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="DAC Right Input" 1 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="HP Analog Playback Volume" 60 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="HP Driver Playback Volume" 3 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="HP Left Switch" 1 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="HP Right Switch" 1 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="Output Left From Left DAC" 1 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="Output Right From Right DAC"  1 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="DAC Playback Volume" 127 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="Speaker Switch"  1 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="Speaker Driver Playback Switch" 1 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="DAC Playback Volume"  170 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="Speaker Analog Playback Volume"  72 >> /dev/null
+	amixer -c 0 cset iface=MIXER,name="Speaker Driver Playback Volume" 3 >> /dev/null
+
+	# Turn off all LEDs
+	LED=16 #red
+	echo $LED > /sys/class/gpio/export
+	echo out > /sys/class/gpio/gpio$LED/direction
+	echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+	LED=21 #yellow
+	echo $LED > /sys/class/gpio/export
+	echo out > /sys/class/gpio/gpio$LED/direction
+	echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+	LED=28 #green
+	echo $LED > /sys/class/gpio/export
+	echo out > /sys/class/gpio/gpio$LED/direction
+	echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+	LED=29 #orange
+	echo $LED > /sys/class/gpio/export
+	echo out > /sys/class/gpio/gpio$LED/direction
+	echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+	LED=62 #FP sensor
+	echo $LED > /sys/class/gpio/export
+	echo out > /sys/class/gpio/gpio$LED/direction
+	echo 0 > /sys/class/gpio/gpio$LED/value #off
+
+	# IR LED
+	echo 4 > /sys/class/backlight/backlight/bl_power
+
+	# Print version on boot
+	/usr/bin/version | logger -s
+
+	# Reset fuel gauge to match new battery settings
+	echo 1 > /sys/class/power_supply/bq27510g3_battery/enable_it
+}
+
+deinit() {
+	echo > /dev/null
+}
+
+case "$1" in
+	start)
+		echo -n "Starting $DESC: "
+		init
+		echo "done"
+		;;
+	stop)
+		echo -n "Stopping $DESC: "
+		deinit
+		echo "done"
+		;;
+	*)
+		N=/etc/init.d/$NAME
+		echo "Usage: $N {start|stop}" >&2
+		exit 1
+		;;
+esac
+
+exit 0
